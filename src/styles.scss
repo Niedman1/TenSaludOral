@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(./assets/fuente/Montserrat-Regular.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Montserrat-Semibold';
+    src: url(./assets/fuente/Montserrat-SemiBold.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(./assets/fuente/Montserrat-Bold.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url(./assets/fuente/Montserrat-Black.ttf);
+    font-weight: 400;
+}
+
+.Secciones{
+    background-image: url("https://img.freepik.com/foto-gratis/textura-pared-estuco-azul-marino-relieve-decorativo-abstracto-grunge-fondo-color-rugoso-gran-angular_1258-28311.jpg?w=2000");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px 0 20px;
+}
+
+#Carrusel.Secciones{
+    padding: 0;
+}
