@@ -9,7 +9,6 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { EspecialistasComponent } from './components/especialistas/especialistas.component';
 import { AlianzasComponent } from './components/alianzas/alianzas.component';
 import { ComoLlegarComponent } from './components/como-llegar/como-llegar.component';
-import { RedesComponent } from './components/redes/redes.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { FooterComponent } from './components/footer/footer.component';
     EspecialistasComponent,
     AlianzasComponent,
     ComoLlegarComponent,
-    RedesComponent,
     FooterComponent
   ],
   imports: [
