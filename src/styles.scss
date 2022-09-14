@@ -1,6 +1,10 @@
 body{
-    margin: 0;
-    font-family: Montserrat-Bold;
+    margin: 0;    
+}
+
+a{
+    text-decoration: none;
+    color: white;    
 }
 
 ul{
@@ -9,27 +13,48 @@ ul{
 
 @font-face {
     font-family: 'Montserrat-Regular';
-    src: url(./assets/fuente/Montserrat-Regular.ttf);
-    font-weight: 100;
+    src: url(./assets/fuente/Montserrat-Regular.ttf);    
 }
 @font-face {
     font-family: 'Montserrat-Semibold';
-    src: url(./assets/fuente/Montserrat-SemiBold.ttf);
-    font-weight: 200;
+    src: url(./assets/fuente/Montserrat-SemiBold.ttf);    
 }
 @font-face {
     font-family: 'Montserrat-Bold';
-    src: url(./assets/fuente/Montserrat-Bold.ttf);
-    font-weight: 300;
+    src: url(./assets/fuente/Montserrat-Bold.ttf);    
 }
 @font-face {
     font-family: 'Montserrat-Black';
-    src: url(./assets/fuente/Montserrat-Black.ttf);
-    font-weight: 400;
+    src: url(./assets/fuente/Montserrat-Black.ttf);    
 }
 
-.Secciones{
-    background-image: url("https://img.freepik.com/foto-gratis/textura-pared-estuco-azul-marino-relieve-decorativo-abstracto-grunge-fondo-color-rugoso-gran-angular_1258-28311.jpg?w=2000");
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url(./assets/fuente/Raleway-Bold.ttf);    
+}
+@font-face {
+    font-family: 'Raleway-Italic';
+    src: url(./assets/fuente/Raleway-Italic.ttf);    
+}
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url(./assets/fuente/Raleway-Regular.ttf);    
+}
+
+.titulos{
+    font-family:Raleway-Bold;
+    // color: rgb(216, 217, 32); color limon
+    color: rgb(167, 191, 48);
+}
+.subtitulos{
+    font-family:Raleway-Regular;
+}
+.parrafos{
+    font-family: Raleway-Italic;
+}
+
+
+.Secciones{    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -43,13 +68,24 @@ ul{
 #Carrusel.Secciones{
     padding: 0;
 }
+#Servicios.Secciones{
+    background-image: url("./assets/Fondos/fondo2_Mesa\ de\ trabajo\ 1.jpg");
+    background-repeat: repeat-y;  
+}
 
 #Especialistas.Secciones{
     padding: 20px;
+    background-image: url("./assets/Fondos/fondo1-01.jpg");
 }
 #Alianzas.Secciones{
     padding: 20px;
+    background-image: url("./assets/Fondos/fondo1-1-02.jpg");
 }
 #ComoLlegar.Secciones{
     padding: 20px;
+    background-image: url("./assets/Fondos/fonde3-02.jpg");
+}
+#Footer.Secciones{
+    padding: 20px;
+    background-image: url("./assets/Fondos/fondo2_Mesa\ de\ trabajo\ 1.jpg");
 }
