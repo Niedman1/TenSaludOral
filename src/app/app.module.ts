@@ -3,28 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { CarruselComponent } from './components/carrusel/carrusel.component';
-import { ServiciosComponent } from './components/servicios/servicios.component';
-import { EspecialistasComponent } from './components/especialistas/especialistas.component';
-import { AlianzasComponent } from './components/alianzas/alianzas.component';
-import { ComoLlegarComponent } from './components/como-llegar/como-llegar.component';
-import { FooterComponent } from './components/footer/footer.component';
+
+import { ComponentsModule } from './components/components.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavBarComponent,
-    CarruselComponent,
-    ServiciosComponent,
-    EspecialistasComponent,
-    AlianzasComponent,
-    ComoLlegarComponent,
-    FooterComponent
+    AppComponent,        
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,    
+    PagesModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
