@@ -7,6 +7,8 @@ import { EspecialistasComponent } from './especialistas/especialistas.component'
 import { AlianzasComponent } from './alianzas/alianzas.component';
 import { ComoLlegarComponent } from './como-llegar/como-llegar.component';
 import { FooterComponent } from './footer/footer.component';
+import { EspecialistasHistoriaComponent } from './especialistas-historia/especialistas-historia.component';
+
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FooterComponent } from './footer/footer.component';
     EspecialistasComponent, 
     AlianzasComponent, 
     ComoLlegarComponent, 
-    FooterComponent],
+    FooterComponent, 
+    EspecialistasHistoriaComponent, 
+    ],
   imports: [
     CommonModule
   ],
@@ -28,7 +32,8 @@ import { FooterComponent } from './footer/footer.component';
     EspecialistasComponent,
     AlianzasComponent,
     ComoLlegarComponent,
-    FooterComponent    
+    FooterComponent,
+    EspecialistasHistoriaComponent,    
   ]
 })
 export class ComponentsModule { }
