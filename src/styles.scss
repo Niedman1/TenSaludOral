@@ -41,6 +41,16 @@ ul{
     src: url(./assets/fuente/Raleway-Regular.ttf);    
 }
 
+.btn-ingreso {
+    color: white;
+    background-color: rgb(167, 191, 48);
+    width: 100%;
+  }
+  .btn-ingreso:hover{
+      background-color: rgb(109, 173, 149);
+      color: white;
+  }
+
 .titulos{
     font-family:Raleway-Bold;
     // color: rgb(216, 217, 32); color limon

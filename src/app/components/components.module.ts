@@ -11,6 +11,7 @@ import { EspecialistasHistoriaComponent } from './especialistas-historia/especia
 
 
 
+
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -21,6 +22,7 @@ import { EspecialistasHistoriaComponent } from './especialistas-historia/especia
     ComoLlegarComponent, 
     FooterComponent, 
     EspecialistasHistoriaComponent, 
+    
     ],
   imports: [
     CommonModule
@@ -33,7 +35,8 @@ import { EspecialistasHistoriaComponent } from './especialistas-historia/especia
     AlianzasComponent,
     ComoLlegarComponent,
     FooterComponent,
-    EspecialistasHistoriaComponent,    
+    EspecialistasHistoriaComponent,
+       
   ]
 })
 export class ComponentsModule { }

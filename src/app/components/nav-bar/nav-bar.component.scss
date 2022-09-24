@@ -1,8 +1,14 @@
-.NavBar{
-    color: white;
-    
+.NavBar {
+  color: white;
 }
 
-.navbar-toggler{
-     color: rgb(216, 217, 32);         
+.navbar-toggler {
+  color: rgb(216, 217, 32);
 }
+
+.contenedor-btn-ingreso{
+    display: flex;
+    flex-direction: column;       
+}
+
+
