@@ -1,0 +1,36 @@
+.contenedor-cartas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenedor-cartas p{
+    margin: 0;
+}
+.carta-herramienta{          
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    width: 50%;
+    height: 20vh;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    font-size: 16px;
+    padding: 10px;
+    font-family: Raleway-Italic;
+        
+}
+.carta-herramienta:hover{
+    box-shadow: 0 0 20px rgb(109, 173, 149);
+}
+
+.contenedor-perfilusuario{
+    padding: 20px;
+    font-family: Raleway-Bold;
+}
