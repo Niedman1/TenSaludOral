@@ -1,7 +1,14 @@
 .contenedor-formulario{
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40%;    
+    justify-content: center;   
+}
+
+.btn-registro{
+    background-color: rgb(109, 173, 149);
+}
+.btn-registro:hover{
+    background-color: rgb(167, 191, 48);
 }

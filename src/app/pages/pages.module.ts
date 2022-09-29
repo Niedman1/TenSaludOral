@@ -7,6 +7,7 @@ import { ValoracionComponent } from './valoracion/valoracion.component';
 import { NuestrosEspecialistasComponent } from './nuestros-especialistas/nuestros-especialistas.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { LoginComponent } from './login/login.component';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoginComponent } from './login/login.component';
     ValoracionComponent,
     NuestrosEspecialistasComponent,
     RegistrarComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilUsuarioComponent
   ],
   imports: [
     CommonModule,

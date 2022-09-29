@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NuestrosEspecialistasComponent } from './pages/nuestros-especialistas/nuestros-especialistas.component';
+import { PerfilUsuarioComponent } from './pages/perfil-usuario/perfil-usuario.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { ValoracionComponent } from './pages/valoracion/valoracion.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: "especialistas", component:NuestrosEspecialistasComponent},
   {path: "login", component:LoginComponent},
   {path: "registrar", component:RegistrarComponent},
+  {path: "perfilUsuario", component:PerfilUsuarioComponent}
 ];
 
 @NgModule({
