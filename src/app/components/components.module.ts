@@ -21,7 +21,7 @@ import { EspecialistasHistoriaComponent } from './especialistas-historia/especia
     AlianzasComponent, 
     ComoLlegarComponent, 
     FooterComponent, 
-    EspecialistasHistoriaComponent, 
+    EspecialistasHistoriaComponent,
     
     ],
   imports: [

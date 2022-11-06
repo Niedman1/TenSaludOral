@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import { BrowserAnimationsModule  } from '@angular/platform-browser/animations';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,12 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     AppRoutingModule,    
     PagesModule,
-    ComponentsModule
+    ComponentsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
