@@ -1,19 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { UsuarioService } from './../../servicios/usuario.service';
+import { Router } from '@angular/router';
+declare var google:any;
 
 @Component({
   selector: 'app-registrar',
   templateUrl: './registrar.component.html',
   styleUrls: ['./registrar.component.scss'],
 })
-export class RegistrarComponent implements OnInit {
+export class RegistrarComponent implements OnInit, AfterViewInit {
 
   usuarioForm: FormGroup;
   usuario: any;
 
-  constructor(public fb: FormBuilder, public Usuario: UsuarioService) {}
+  constructor(public fb: FormBuilder, public Usuario: UsuarioService, private routerNav: Router) {}
+
+
+  ngAfterViewInit(): void {
+    google.accounts.id.initialize({
+      client_id: "293498881470-338nafpcj0kno3k1flnfsehn49mak51j.apps.googleusercontent.com",
+      callback: this.handleCredentialResponse
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("buttonDiv"),
+      { theme: "outline", size: "large" }  // customization attributes
+    );
+    google.accounts.id.prompt(); // also display the One Tap dialog
+  }
 
  
 
@@ -32,8 +47,17 @@ export class RegistrarComponent implements OnInit {
       this.usuario= Response
     },
     error => {console.error(error)}
-    )
+    );  
 
+  }
+
+  handleCredentialResponse(response){
+    console.log(response);
+    if (response.credential) {
+      //this.router.navigate(['/home'])
+      //this.routerNav.navigateByUrl("/home");
+      document.location.href = "/login";
+    }
   }
 
   guardar(): void {

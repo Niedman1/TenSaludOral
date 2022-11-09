@@ -12,13 +12,14 @@ import { ValoracionComponent } from './pages/valoracion/valoracion.component';
 
 
 const routes: Routes = [  
-  {path: "", component:HomeComponent},
+  {path: "home", component:HomeComponent},
   {path: "valoracion", component:ValoracionComponent},
   {path: "especialistas", component:NuestrosEspecialistasComponent},
   {path: "login", component:LoginComponent},
   {path: "registrar", component:RegistrarComponent},
   {path: "perfilUsuario", component:PerfilUsuarioComponent},
   {path: "perfilAdmin", component:PerfilAdministradorComponent},
+  {path:  '**', redirectTo: '/home', pathMatch: 'full'},
 ];
 
 @NgModule({
