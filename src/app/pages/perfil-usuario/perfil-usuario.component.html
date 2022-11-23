@@ -1,0 +1,25 @@
+<div class="contenedor-perfilusuario">
+    <div>
+        <div>
+            <h3 class="subtitulos">Servicio Ten Salud Oral</h3>
+            <h1 class="titulos">Hola, {{nombre}}</h1>
+            <p class="parrafos">Realiza facilmente tus procesos con Ten Salud Oral</p>
+            <p class="parrafos">¡Conoce aquí las soluciones virtuales que tenemos especialmente para ti!</p>
+        </div> 
+    </div>
+    <h1 class="titulos" style="text-align: center;">¡Tus Herramientas!</h1>
+    <div class="contenedor-cartas" >        
+        <div class="carta-herramienta" (click)="agendar()">
+            <i class="fa-regular fa-calendar-check mb-2" style="font-size: 40px; color: rgb(167, 191, 48);"></i>
+            <p>Agenda tu cita con nosotros aquí. </p>
+        </div>
+        <div class="carta-herramienta" (click)="tratamientos()">
+            <i class="fa-regular fa-file-zipper mb-2" style="font-size: 40px; color: rgb(167, 191, 48);"></i>
+            <p>Mis tratamientos. </p>
+        </div>
+        <div class="carta-herramienta">
+            <i class="fa-regular fa-money-bill-1 mb-2" style="font-size: 40px; color: rgb(167, 191, 48);"></i>
+            <p>Valoración. </p>
+        </div>
+    </div>
+</div>

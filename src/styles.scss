@@ -1,0 +1,126 @@
+body {
+  margin: 0 0;
+  padding: 24% 0 0 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url(./assets/fuente/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Semibold";
+  src: url(./assets/fuente/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(./assets/fuente/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url(./assets/fuente/Montserrat-Black.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url(./assets/fuente/Raleway-Bold.ttf);
+}
+@font-face {
+  font-family: "Raleway-Italic";
+  src: url(./assets/fuente/Raleway-Italic.ttf);
+}
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url(./assets/fuente/Raleway-Regular.ttf);
+}
+
+.btn-ingreso {
+  color: white;
+  background-color: rgb(167, 191, 48);
+  width: 100%;
+}
+.btn-ingreso:hover {
+  background-color: rgb(109, 173, 149);
+  color: white;
+}
+
+.titulos {
+  font-family: Raleway-Bold;
+  // color: rgb(216, 217, 32); color limon
+  color: rgb(167, 191, 48);
+}
+.subtitulos {
+  font-family: Raleway-Regular;
+}
+.parrafos {
+  font-family: Raleway-Italic;
+}
+
+.Secciones {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+  width: 100%;
+}
+
+#Carrusel.Secciones {
+  padding: 0;  
+}
+#Servicios.Secciones {
+  background-image: url("./assets/Fondos/fondo2_Mesa\ de\ trabajo\ 1.jpg");
+  background-repeat: repeat-y;
+}
+
+#Especialistas.Secciones {
+  padding: 20px;
+  background-image: url("./assets/Fondos/fondo1-01.jpg");
+}
+#Alianzas.Secciones {
+  padding: 20px;
+  background-image: url("./assets/Fondos/fondo1-1-02.jpg");
+}
+#ComoLlegar.Secciones {
+  padding: 20px;
+  background-image: url("./assets/Fondos/fonde3-02.jpg");
+}
+#Footer.Secciones {
+  padding: 20px;
+  background-image: url("./assets/Fondos/fondo2_Mesa\ de\ trabajo\ 1.jpg");
+}
+
+@media (min-width: 520px) {
+  
+}
+@media (min-width: 800px) {
+  body {
+    padding: 10% 0 0 0;
+  }  
+  #Footer.Secciones {    
+    align-items: center; 
+        
+  }
+ 
+}
+@media (min-width: 992px) {
+  #Footer.Secciones {    
+    align-items: center; 
+        
+  }
+  .btn-ingreso {    
+    width: auto;
+  }
+}

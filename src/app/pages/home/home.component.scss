@@ -1,0 +1,24 @@
+#wpp img {
+  position: fixed;
+  width: 15%;
+  margin-left: 20px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+@media (min-width: 520px) {
+  #wpp img {    
+    width: 12%; 
+  }
+}
+@media (min-width: 800px) {
+  #wpp img {    
+    width: 8%; 
+  }
+}
+@media (min-width: 992px) {
+  #wpp img {    
+    width: 5%; 
+  }
+}

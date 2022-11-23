@@ -1,0 +1,42 @@
+.centrar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.anchoDerechos {    
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
+  }
+
+@media (min-width: 520px) {
+}
+@media (min-width: 800px) {
+  .contenedorFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+  }
+  .contenedorFooter div {
+    padding: 0 8% 0 0;
+  }
+  .centrar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: white;
+  }
+}
+@media (min-width: 992px) {
+  .contenedorFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 100vh;
+    font-size: 20px;
+  }
+  
+}

@@ -1,0 +1,28 @@
+.ServiciosContenedor {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 40px;
+  color: black;
+}
+
+
+.CardsContenedor{
+    width: 18rem;
+    margin-top: 20px;
+}
+
+@media (min-width: 520px) {
+    .CardsContenedor{
+        width: 20rem;        
+    }
+}
+@media (min-width: 800px) {
+    .CardsContenedor{
+        width: 25rem;        
+    }
+}
+@media (min-width: 1200px) {
+    
+}

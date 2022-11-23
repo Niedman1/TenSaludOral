@@ -1,0 +1,43 @@
+<div class="contenedorFormulario">
+    <form [formGroup]="agendaForm"  >
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nombre" value={{nombreUsuario}}>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Cedula</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="cedula" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="correo" value={{correo}} >
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Especialidad</label>
+            <select name="servicio" id="servicio" class="form-control"  formControlName="servicio" >
+                <option [ngValue]="item" *ngFor="let item of servicios">{{item.tipoServicio}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Especialista</label>
+            <select name="medico" id="medico" class="form-control"  formControlName="medico" >
+                <option [ngValue]="item" *ngFor="let item of medicos">{{item.nombre}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de inicio</label>
+            <input type="datetime-local" min={{fechaMin}} max="2023-01-01T00:00" class="form-control" id="exampleFormControlInput1" name="fechaInicio" id="fechaInicio" formControlName="fechaInicio" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fecha fin</label>
+            <input type="datetime-local" class="form-control" id="exampleFormControlInput1" formControlName="fechaFin" placeholder="name@example.com">
+        </div>
+
+        <button 
+       type="submit" class="btn btn-success" *ngIf="mostrar == 'true'"  (click)="guardar()" >Asignar Cita</button>
+       <button 
+       type="submit" class="btn btn-success" *ngIf="mostrar == 'true'"  (click)="actualizar(agendaForm)">Actualizar Cita</button>
+       
+       
+    </form>
+</div>
