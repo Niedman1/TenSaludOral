@@ -4,7 +4,9 @@ import { ServiciosService } from './../../servicios/servicios.service';
 import { DoctoresService } from './../../servicios/doctores.service';
 import { CitasService } from './../../servicios/citas.service';
 import { MostrarBotonService } from './../../servicios/mostrar-boton.service';
+import { Cita } from "../modelo/cita"
 import { ThisReceiver } from '@angular/compiler';
+import { ComoLlegarComponent } from 'src/app/components/como-llegar/como-llegar.component';
 
 declare var esconderboton:Boolean;
 @Component({
@@ -14,8 +16,9 @@ declare var esconderboton:Boolean;
 })
 export class AgendaComponent implements OnInit {
   agendaForm: FormGroup;
-  mostrar: any = 'true';
-  mostrar2: any;
+  modeloCita: Cita;
+  mostrar: any = "true";
+  mostrar2: boolean;
   nombreUsuario: any;
   correo: any;
   servicios: any;
@@ -47,17 +50,7 @@ export class AgendaComponent implements OnInit {
   ngOnInit(): void {
     this.nombreUsuario = sessionStorage.getItem('nombre');
     this.correo = sessionStorage.getItem('correo');
-    this.agendaForm = this.fb.group({
-      nombre: ['', ],
-      fechaInicio: ['', Validators.required],
-      fechaFin: ['', Validators.required],
-      correo: ['', Validators.required],
-      medico: ['', Validators.required],
-      cedula : ['', Validators.required] ,
-      servicio: ['', Validators.required],
-      eventoAgendaId : [''],
-       // FORMATO FECHA "2022-11-15T05:00:00-05:00"
-    });
+    this.crearFormulario();
 
     this.serviciosService.getAllServicios().subscribe(
       (Response) => {
@@ -81,20 +74,23 @@ export class AgendaComponent implements OnInit {
       );
     })
 
-    this.mostrar  = localStorage.getItem('ocultar') 
+    this.mostrar  = localStorage.getItem('ocultar');
+    this.mostrar2 =  (this.mostrar == "true");
+    console.log(this.mostrar2); 
   }
 
  
   crearFormulario() {
     this.agendaForm = this.fb.group({
-      nombre: ['', Validators.required],
-      correo: ['', Validators.required],
-      servicio: ['', Validators.required],
-      medico: ['', Validators.required],
+      nombre: ['', ],
       fechaInicio: ['', Validators.required],
       fechaFin: ['', Validators.required],
-      cedula: ['', Validators.required],
+      correo: ['', Validators.required],
+      medico: ['', Validators.required],
+      cedula : ['', Validators.required] ,
+      servicio: ['', Validators.required],
       eventoAgendaId : [''],
+       // FORMATO FECHA "2022-11-15T05:00:00-05:00"
     });
   }
 
@@ -108,18 +104,20 @@ export class AgendaComponent implements OnInit {
    
   }
 
-  actualizar (cita) {
-    
-    this.citasService.updateCitas(cita.eventoAgendaId, cita).subscribe(Response => {
-      //console.log(Response)
+  actualizar () {
+    this.modeloCita = this.agendaForm.value;
+    let evento = String(localStorage.getItem('evento'))
+    this.citasService.updateCitas( evento , this.modeloCita).subscribe(Response => {
+      
       if(Response){
+        this.mostrar2 = true;
         window.location.reload();
       }
     },
     error => {console.error(error)}
     )} 
 
-    
+  
 
     
  

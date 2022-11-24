@@ -21,12 +21,10 @@
           <td>{{item.medico.nombre}}</td>
           <td>{{item.servicio.tipoServicio}}</td>
           <td>
-            <button type="button" class="btn btn-danger" (click)="eliminar(item)" >Eliminar</button>
-            <button type="button" class="btn btn-sucess" (click)="actualizarAgenda()"  >Editar</button>
+            <button type="button" class="btn btn-outline-danger" style="margin-right: 10px;" (click)="eliminar(item)" ><i class="fa-solid fa-user-slash"></i></button>
+            <button type="button" class="btn btn-outline-success " (click)="actualizarAgenda(item)"  ><i class="fa-regular fa-pen-to-square"></i></button>
           </td>
         </tr>
       </tbody>
     </table>
-    <a href="" class="btn btn-outline-success" style="margin-right: 5px;"><i class="fa-regular fa-pen-to-square"></i></a>
-                <a href="" class="btn btn-outline-danger"><i class="fa-solid fa-user-slash"></i></a>
   </div>

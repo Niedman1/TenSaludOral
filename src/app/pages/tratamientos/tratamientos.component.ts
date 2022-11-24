@@ -11,7 +11,6 @@ import { MostrarBotonService } from './../../servicios/mostrar-boton.service';
 })
 export class TratamientosComponent implements OnInit {
   cita: Cita[] = [];
-  @Output() mostrarButton = new EventEmitter<boolean>();
 
   constructor(
     public Citas: CitasService,
@@ -49,8 +48,9 @@ export class TratamientosComponent implements OnInit {
     );
   }
 
-  actualizarAgenda() {
-    localStorage.setItem('ocultar', 'false');
+  actualizarAgenda(cita) {
+    localStorage.setItem('ocultar', 'true');
+    localStorage.setItem('evento', cita.eventoAgendaId);
     document.location.href = '/agenda';
   }
 

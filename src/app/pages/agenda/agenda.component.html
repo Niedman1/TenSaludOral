@@ -34,9 +34,9 @@
         </div>
 
         <button 
-       type="submit" class="btn btn-success" *ngIf="mostrar == 'true'"  (click)="guardar()" >Asignar Cita</button>
+       type="submit" class="btn btn-success" (click)="guardar()" *ngIf="!mostrar2">Asignar Cita</button>
        <button 
-       type="submit" class="btn btn-success" *ngIf="mostrar == 'true'"  (click)="actualizar(agendaForm)">Actualizar Cita</button>
+       type="submit" class="btn btn-success" *ngIf="mostrar2"  (click)="actualizar()">Actualizar Cita</button>
        
        
     </form>
