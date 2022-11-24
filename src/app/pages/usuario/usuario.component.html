@@ -21,11 +21,41 @@
           <input type="password" name="contra" id="contra" formControlName="contra"  class="form-control" id="exampleInputPassword1" placeholder="  Ingresa tu Contraseña">
         </div>  
         <button type="submit" class="btn btn-ingreso mb-2" [disabled]="usuarioForm.invalid">Registrate</button>
-
-        <a href="login" class="btn btn-ingreso btn-logeo" >Ingresa</a>
-      </form>   
+      </form> 
+      <div id="buttonDiv"></div>    
 </div>
  
- <section id="Footer" class="Secciones">
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+         
+          <th>cedula</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Correo</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of usuario">
+         
+          <td>{{item.cedula}}</td>
+          <td>{{item.nombre}}</td>
+          <td>{{item.apellidos}}</td>
+          <td>{{item.correo}}</td>
+          <td>
+            <button type="button"  class="btn btn-outline-danger" (click)="eliminar(item)"><i class="fa-solid fa-user-slash"></i></button>
+            <button type="button"  class="btn btn-outline-success " (click)="editar(item)"><i class="fa-regular fa-pen-to-square"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button type="button"  class="btn btn-outline-success " (click)="volver()"><i class="fa-solid fa-house-chimney-user"></i></button>
+
+<section id="Footer" class="Secciones">
   <app-footer></app-footer>
 </section>
+

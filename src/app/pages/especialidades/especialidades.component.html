@@ -1,1 +1,41 @@
-<p>especialidades works!</p>
+<div class="contenedor-formulario" >
+    <form [formGroup]="servicioForm">
+    
+      <div class="form-group mb-2">
+        <label for="exampleInputEmail1">Tipo de Servicio</label>
+        <input type="text" name="tipoServicio" id="tipoServicio" formControlName="tipoServicio" class="form-control"   placeholder="Ingresa tu Servicio">          
+      </div>
+      <button type="button"  class="btn btn-outline-success " (click)="guardar()">Guardar</button>
+    </form>   
+</div>
+ 
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+         
+          <th>Identificador</th>
+          <th>Tipo de Servicio</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of servicio">
+         
+          <td>{{item.id}}</td>
+          <td>{{item.tipoServicio}}</td>
+
+          <td>
+            <button type="button"  class="btn btn-outline-danger" (click)="eliminar(item)"><i class="fa-solid fa-user-slash"></i></button>
+            <button type="button"  class="btn btn-outline-success " (click)="editar(item)"><i class="fa-regular fa-pen-to-square"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button type="button"  class="btn btn-outline-success " (click)="volver()"><i class="fa-solid fa-house-chimney-user"></i></button>
+
+<section id="Footer" class="Secciones">
+  <app-footer></app-footer>
+</section>
+

@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ComoLlegarComponent } from 'src/app/components/como-llegar/como-llegar.component';
 
 declare var google:any;
 
@@ -23,19 +24,38 @@ export class LoginComponent implements  OnInit, AfterViewInit {
     google.accounts.id.prompt(); // also display the One Tap dialog
   }
 
+  
+  
   handleCredentialResponse(response: any){
  
     if (response.credential) {
+      // console.log('este es el token', response.credential)
       //this.router.navigate(['/home'])
       //this.routerNav.navigateByUrl("/home");
-      
-
       sessionStorage.setItem("token",response.credential);
-      document.location.href = "/perfilUsuario";
+      let token = response.credential as string;
+      let base64Url = token.split('.')[1];
+      let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      let jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+
+      let tokenJson =  JSON.parse(jsonPayload);
+      
+      let correoToken = tokenJson.email;
+      
+      console.log('este es el correo token', correoToken)
+      if (correoToken == "yessica_piedrahita82181@elpoli.edu.co") {
+        document.location.href = "/perfilAdmin";
+      }else{
+        document.location.href = "/perfilUsuario";
+      }
+      
     }
   }
 
   ngOnInit(): void {
+    
   }
 
 }

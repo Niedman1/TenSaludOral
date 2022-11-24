@@ -1,32 +1,47 @@
+<div class="contenedor-formulario" >
+  <form [formGroup]="medicoForm" (ngSubmit)="guardar()">
+  
+    <div class="form-group mb-2">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input type="text" name="nombre" id="nombre" formControlName="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu Nombre">          
+    </div>
+    <div class="form-group mb-2">
+      <label for="exampleInputEmail1">Apellido</label>
+      <input type="text" name="nombre" id="nombre" formControlName="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu Apellido">          
+    </div>
+    <div class="form-group mb-2">
+      <label for="exampleInputEmail1">Servicio</label>
+      <input type="text" name="nombre" id="nombre" formControlName="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa el Servicio">          
+    </div>
+    <button type="button"  class="btn btn-outline-success " (click)="guardar()">Guardar</button>
+
+    </form> 
+    <div id="buttonDiv"></div>    
+</div>
+
+
 <div>
     <table class="table">
       <thead>
         <tr>
-          <th>cedula</th>
-          <th>Correo</th>
-          <th>Fecha Inicio</th>
-          <th>Fecha Fin</th>
-          <th>Doctor</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
           <th>Servicio</th>
         </tr>
       </thead>
 
-      <!-- <tbody>
-        <tr *ngFor="let item of medico">
+      <tbody>
+        <tr *ngFor="let item of medicos">
          
-          <td>{{item.cedula}}</td>
-          <td>{{item.correo}}</td>
-          <td>{{item.fechaFin}}</td>
-          <td>{{item.fechaInicio}}</td>
-          <td>{{item.medico.nombre}}</td>
+          <td>{{item.nombre}}</td>
+          <td>{{item.apellidos}}</td>
           <td>{{item.servicio.tipoServicio}}</td>
           <td>
-            <button type="button" class="btn btn-danger" (click)="eliminar(item)" >Eliminar</button>
-            <button type="button" class="btn btn-sucess" (click)="actualizarAgenda()"  >Editar</button>
+            <button type="button"  class="btn btn-outline-danger" (click)="eliminar(item)"><i class="fa-solid fa-user-slash"></i></button>
+            <button type="button"  class="btn btn-outline-success " (click)="editar(item)"><i class="fa-regular fa-pen-to-square"></i></button>
           </td>
         </tr>
-      </tbody> -->
+      </tbody>
     </table>
-    <a href="" class="btn btn-outline-success" style="margin-right: 5px;"><i class="fa-regular fa-pen-to-square"></i></a>
-                <a href="" class="btn btn-outline-danger"><i class="fa-solid fa-user-slash"></i></a>
+    <button type="button"  class="btn btn-outline-success " (click)="volver()"><i class="fa-solid fa-house-chimney-user"></i></button>
   </div>

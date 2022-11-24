@@ -15,8 +15,8 @@ export class ServiciosService {
     return this.httpClient.get(this.API_SERVER);
   }
 
-  public saveServicios(usuario: any): Observable<any> {
-    return this.httpClient.post(this.API_SERVER, usuario);
+  public saveServicios(servicio: any): Observable<any> {
+    return this.httpClient.post(this.API_SERVER, servicio);
   }
 
   public deleteServicios(id: string): Observable<any>{

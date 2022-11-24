@@ -1,0 +1,14 @@
+.contenedor-formulario{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;        
+}
+
+.btn-logeo{
+    background-color: rgb(109, 173, 149);
+}
+.btn-logeo:hover{
+    background-color: rgb(167, 191, 48);
+}

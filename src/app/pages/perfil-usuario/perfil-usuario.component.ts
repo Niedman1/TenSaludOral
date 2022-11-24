@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PerfilUsuarioComponent implements OnInit {
 
   public objetounico:any;
-  public nombre : String;
+  public nombre : string;
   
 
   constructor() { }

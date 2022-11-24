@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ServiciosService } from './../../servicios/servicios.service';
 import { DoctoresService } from './../../servicios/doctores.service';
 import { CitasService } from './../../servicios/citas.service';
@@ -7,6 +7,7 @@ import { MostrarBotonService } from './../../servicios/mostrar-boton.service';
 import { Cita } from "../modelo/cita"
 import { ThisReceiver } from '@angular/compiler';
 import { ComoLlegarComponent } from 'src/app/components/como-llegar/como-llegar.component';
+import { ResolveStart } from '@angular/router';
 
 declare var esconderboton:Boolean;
 @Component({
@@ -17,8 +18,9 @@ declare var esconderboton:Boolean;
 export class AgendaComponent implements OnInit {
   agendaForm: FormGroup;
   modeloCita: Cita;
+  idEdit: number;
   mostrar: any = "true";
-  mostrar2: boolean;
+  mostrar2: boolean ;
   nombreUsuario: any;
   correo: any;
   servicios: any;
@@ -44,10 +46,11 @@ export class AgendaComponent implements OnInit {
     public serviciosService: ServiciosService,
     public doctoresService: DoctoresService,
     public citasService: CitasService,
-    public MostrarBotonService : MostrarBotonService,
+    public mostrarService : MostrarBotonService,
   ) {}
 
   ngOnInit(): void {
+    this.mostrar2 = true;
     this.nombreUsuario = sessionStorage.getItem('nombre');
     this.correo = sessionStorage.getItem('correo');
     this.crearFormulario();
@@ -72,20 +75,19 @@ export class AgendaComponent implements OnInit {
           console.error(error);
         }
       );
-    })
 
-    this.mostrar  = localStorage.getItem('ocultar');
-    this.mostrar2 =  (this.mostrar == "true");
-    console.log(this.mostrar2); 
+
+    })
+    
   }
 
  
   crearFormulario() {
     this.agendaForm = this.fb.group({
-      nombre: ['', ],
+      nombre: [this.nombreUsuario, ],
       fechaInicio: ['', Validators.required],
       fechaFin: ['', Validators.required],
-      correo: ['', Validators.required],
+      correo: [this.correo, Validators.required],
       medico: ['', Validators.required],
       cedula : ['', Validators.required] ,
       servicio: ['', Validators.required],
@@ -95,30 +97,15 @@ export class AgendaComponent implements OnInit {
   }
 
   guardar(): void {
-
+    console.log('Esta es Fecha Inicio ' + this.agendaForm.value.fechaInicio)
+    console.log('Esta es Fecha Fin ' + this.agendaForm.value.fechaFin)
     this.citasService.saveCitas(this.agendaForm.value).subscribe(Response => {
-
+      window.location.reload();
     },
     error => {console.error(error)}
     )
    
   }
 
-  actualizar () {
-    this.modeloCita = this.agendaForm.value;
-    let evento = String(localStorage.getItem('evento'))
-    this.citasService.updateCitas( evento , this.modeloCita).subscribe(Response => {
-      
-      if(Response){
-        this.mostrar2 = true;
-        window.location.reload();
-      }
-    },
-    error => {console.error(error)}
-    )} 
-
   
-
-    
- 
 }

@@ -13,6 +13,8 @@ import { AgendaComponent } from './pages/agenda/agenda.component';
 import { TratamientosComponent } from './pages/tratamientos/tratamientos.component';
 import { MedicosComponent } from './pages/medicos/medicos.component';
 import { EspecialidadesComponent } from './pages/especialidades/especialidades.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+
 
 
 const routes: Routes = [  
@@ -27,6 +29,7 @@ const routes: Routes = [
   {path: "tratamientos", component:TratamientosComponent},
   {path: "medicos", component:MedicosComponent},
   {path: "especialidades", component:EspecialidadesComponent},
+  {path: "usuario", component:UsuarioComponent},
   {path:  '**', redirectTo: '/home', pathMatch: 'full'},
 ];
 

@@ -19,4 +19,19 @@ export class PerfilAdministradorComponent implements OnInit {
   tratamientos(){
     document.location.href = "/tratamientos";
   }
+
+  usuarios(){
+    document.location.href = "/usuario";
+  }
+
+  especialidades(){
+    document.location.href = "/especialidades";
+  }
+
+  especialistas(){
+    document.location.href = "/medicos";
+  }
+
+  
+
 }

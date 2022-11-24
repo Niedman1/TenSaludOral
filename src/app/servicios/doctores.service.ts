@@ -19,4 +19,12 @@ export class DoctoresService {
   public getAllDoctoresByEspecialidad(idEspecialidad): Observable<any>{
     return this.httpClient.get(this.API_SERVER+idEspecialidad)
   }
+
+  public saveDoctores(medico: any): Observable<any> {
+    return this.httpClient.post(this.API_SERVER, medico);
+  }
+
+  public deleteDoctores(id: string): Observable<any>{
+    return this.httpClient.delete(this.API_SERVER + 'delete/' + id  );
+  }
 }

@@ -14,6 +14,7 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { TratamientosComponent } from './tratamientos/tratamientos.component';
 import { EspecialidadesComponent } from './especialidades/especialidades.component';
 import { MedicosComponent } from './medicos/medicos.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MedicosComponent } from './medicos/medicos.component';
     TratamientosComponent,
     EspecialidadesComponent,
     MedicosComponent,
+    UsuarioComponent,
     
   ],
   imports: [

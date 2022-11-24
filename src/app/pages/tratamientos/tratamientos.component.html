@@ -1,7 +1,21 @@
+<div class="contenedor-formulario" >
+  <form [formGroup]="tratamientosForm">
+  
+    <div class="form-group mb-2">
+      <label for="exampleInputEmail1">Ingrese la Cedula</label>
+      <input type="text" name="cedula" id="cedula" formControlName="cedula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu Cedula">          
+    </div>
+    <button 
+    type="submit" class="btn btn-success"  (click)="getCitasByCedula(cita)" >Buscar</button>
+    </form> 
+    <div id="buttonDiv"></div>    
+</div>
+
 <div>
     <table class="table">
       <thead>
         <tr>
+          <th>Id</th>
           <th>cedula</th>
           <th>Correo</th>
           <th>Fecha Inicio</th>
@@ -13,7 +27,7 @@
 
       <tbody>
         <tr *ngFor="let item of cita">
-         
+          <td>{{item.id}}</td>
           <td>{{item.cedula}}</td>
           <td>{{item.correo}}</td>
           <td>{{item.fechaFin}}</td>
@@ -28,3 +42,6 @@
       </tbody>
     </table>
   </div>
+  <section id="Footer" class="Secciones">
+    <app-footer></app-footer>
+  </section>
